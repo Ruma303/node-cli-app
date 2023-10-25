@@ -1,6 +1,8 @@
 //% chalk
 import chalk from 'chalk';
 //console.log(chalk.red('Testo'));
+import cliArgs from 'yargs';
+console.log(cliArgs.argv)
 
 
 //% Process
@@ -12,5 +14,5 @@ process.exit([console.log('Processo terminato')]) */
 
 //, argv
 
-console.log(process.argv)
+//console.log(process.argv)
 
