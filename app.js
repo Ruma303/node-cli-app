@@ -1,14 +1,16 @@
 //% chalk
 import chalk from 'chalk';
-console.log(chalk.red('Testo'));
+//console.log(chalk.red('Testo'));
 
 
 //% Process
-/*
-console.log(process)
+//console.log(process)
+/* console.log(process.versions)
+console.log(process.env)
+console.log(process.cwd())
+process.exit([console.log('Processo terminato')]) */
 
-process.argv.forEach(
-    function (val, index, array) {
-        console.log(index + ' : ' + val)
-    }
-); */
+//, argv
+
+console.log(process.argv)
+
