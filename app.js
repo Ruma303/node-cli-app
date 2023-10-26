@@ -27,7 +27,7 @@ const yargs = require('yargs');
 //console.log(yargs)
 
 //# yargs.command()
-yargs.command({
+/* yargs.command({
     command: 'get',
     describe: 'Ricerca utente dal nome',
     builder: {
@@ -41,4 +41,31 @@ yargs.command({
         console.log(argv);
     }
 });
-yargs.parse();
+yargs.parse(); */
+
+
+//, Refactoring ed altre funzioni
+
+//console.log(process.argv)
+
+/* const { hideBin } = require('yargs/helpers');
+
+yargs(hideBin(process.argv))
+    .command('get', 'Ricerca utente dal nome',
+        (yargs) => {
+            return yargs
+                .option('name', {
+                    describe: 'Nome dell\'utente da cercare',
+                    demandOption: true,
+                    type: 'string'
+                })
+                .option('last-name', {
+                    describe: 'Cognome dell\'utente da cercare',
+                    demandOption: true,
+                    type: 'string'
+                })
+            },(argv) => console.log(argv)
+        )
+        .help()
+        .argv
+ */
