@@ -18,7 +18,6 @@ process.exit([console.log('Processo terminato')]) */
 //% Yargs
 const cliArgs = require('yargs').argv;
 const yargs = require('yargs');
-const { getUser } = require('./users');
 
 //# yargs.argv
 //console.log(cliArgs)
@@ -28,21 +27,18 @@ const { getUser } = require('./users');
 //console.log(yargs)
 
 //# yargs.command()
-    yargs.command({
-        command: 'get',
-        describe: 'Ricerca utente dal nome',
-        builder: {
-            name: {
-                describe: 'Nome dell\'utente da cercare',
-                demandOption: true,
-                type: 'string'
-            }
-        },
-        handler(argv) {
-            const user = getUser(argv.name);
-            console.log(user);
+yargs.command({
+    command: 'get',
+    describe: 'Ricerca utente dal nome',
+    builder: {
+        name: {
+            describe: 'Nome dell\'utente da cercare',
+            demandOption: true,
+            type: 'string'
         }
-    });
-    yargs.parse();
-
-    //console.log(yargs)
+    },
+    handler(argv) {
+        console.log(argv);
+    }
+});
+yargs.parse();
